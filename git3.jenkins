@@ -4,7 +4,7 @@ pipeline {
         stage("Clone Git Repository") {
             steps {
                 git(
-                    url: "https://github.com/ssbostan/testrepo.git",
+                    url: "https://github.com/Gowtham3543/jenkins-task-jenpro.git",
                     branch: "main",
                     changelog: true,
                     poll: true
@@ -20,8 +20,8 @@ pipeline {
         }
         stage("Push to Git Repository") {
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: 'ssbostan-github-token', gitToolName: 'Default')]) {
-                    sh "git push -u origin main"
+                withCredentials([gitUsernamePassword(credentialsId: 'Gowtham3543-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', gitToolName: 'Default')]) {
+                    sh "git push origin jenkins-task-jenpro"
                 }
             }
         }
