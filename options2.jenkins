@@ -1,12 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image "alpine:latest"
-        }
-    }
-    options {
-        newContainerPerStage()
-    }
+    agent any
     stages {
         stage("Test1") {
             steps {
